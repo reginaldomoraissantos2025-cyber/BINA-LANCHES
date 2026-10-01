@@ -1,11 +1,26 @@
+import { Link } from "react-router-dom";
 import { menu } from "@/data/menu";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground bg-amber-50">
-      <header className="py-8 text-center bg-amber-600 text-white px-4">
+      <header className="py-8 text-center bg-amber-600 text-white px-4 space-y-3">
         <h1 className="text-3xl sm:text-4xl font-bold">Bina Lanches</h1>
         <p className="mt-2 text-sm sm:text-base">Lanche Super</p>
+        <div className="flex flex-wrap justify-center gap-2">
+          <Link
+            to="/preferencias"
+            className="inline-block bg-white text-amber-700 px-4 py-2 rounded-md font-medium text-sm hover:bg-amber-50 transition"
+          >
+            Minhas Preferências
+          </Link>
+          <Link
+            to="/admin"
+            className="inline-block bg-white text-amber-700 px-4 py-2 rounded-md font-medium text-sm hover:bg-amber-50 transition"
+          >
+            Admin
+          </Link>
+        </div>
       </header>
 
       <main className="max-w-3xl mx-auto px-4 py-8 space-y-10">
