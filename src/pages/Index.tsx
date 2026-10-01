@@ -1,0 +1,40 @@
+import { menu } from "@/data/menu";
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background text-foreground bg-amber-50">
+      <header className="py-8 text-center bg-amber-600 text-white px-4">
+        <h1 className="text-3xl sm:text-4xl font-bold">Bina Lanches</h1>
+        <p className="mt-2 text-sm sm:text-base">Lanche Super</p>
+      </header>
+
+      <main className="max-w-3xl mx-auto px-4 py-8 space-y-10">
+        {menu.map((section) => (
+          <section key={section.title}>
+            <h2 className="text-2xl font-semibold mb-4 border-b-2 border-amber-500 pb-2">
+              {section.title}
+            </h2>
+            <div className="space-y-4">
+              {section.items.map((item) => (
+                <div
+                  key={item.name}
+                  className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 bg-white rounded-lg p-4 shadow-sm min-w-0"
+                >
+                  <div className="min-w-0">
+                    <h3 className="font-medium text-lg">{item.name}</h3>
+                    <p className="text-sm text-gray-600">{item.description}</p>
+                  </div>
+                  <span className="font-semibold text-amber-700 whitespace-nowrap">
+                    {item.price}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </main>
+    </div>
+  );
+};
+
+export default Index;
