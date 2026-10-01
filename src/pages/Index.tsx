@@ -18,11 +18,20 @@ const Index = () => {
               {section.items.map((item) => (
                 <div
                   key={item.name}
-                  className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 bg-white rounded-lg p-4 shadow-sm min-w-0"
+                  className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 bg-white rounded-lg p-4 shadow-sm min-w-0"
                 >
-                  <div className="min-w-0">
-                    <h3 className="font-medium text-lg">{item.name}</h3>
-                    <p className="text-sm text-gray-600">{item.description}</p>
+                  <div className="flex items-start gap-4 min-w-0">
+                    {item.image && (
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-md flex-shrink-0"
+                      />
+                    )}
+                    <div className="min-w-0">
+                      <h3 className="font-medium text-lg">{item.name}</h3>
+                      <p className="text-sm text-gray-600">{item.description}</p>
+                    </div>
                   </div>
                   <span className="font-semibold text-amber-700 whitespace-nowrap">
                     {item.price}

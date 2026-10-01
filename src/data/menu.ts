@@ -2,6 +2,7 @@ export interface MenuItem {
   name: string;
   description: string;
   price: string;
+  image?: string;
 }
 
 export interface MenuSection {
@@ -17,16 +18,19 @@ export const menu: MenuSection[] = [
         name: "Lanche Super",
         description: "Pão, carne, queijo, alface, tomate e molho especial",
         price: "R$ 18,00",
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
       },
       {
         name: "X-Bacon",
         description: "Pão, carne, queijo, bacon crocante e maionese",
         price: "R$ 20,00",
+        image: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop",
       },
       {
         name: "X-Salada",
         description: "Pão, carne, queijo, alface, tomate e cebola",
         price: "R$ 16,00",
+        image: "https://images.unsplash.com/photo-1550317138-10000687a72b?w=400&h=300&fit=crop",
       },
     ],
   },
